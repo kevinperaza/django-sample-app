@@ -17,3 +17,9 @@ running django dev server
 ```python
 python manage.py runserver
 ```
+
+create new "app"
+
+```python
+python manage.py startapp app-name
+```
