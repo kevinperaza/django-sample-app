@@ -23,3 +23,33 @@ create new "app"
 ```python
 python manage.py startapp app-name
 ```
+
+See pending migrations
+
+```python
+python manage.py showmigrations
+```
+
+Run django migrations
+
+```python
+python manage.py migrate
+```
+
+Generate django migrations after updating a data model
+
+```python
+python manage.py makemigrations
+```
+
+Inspect migration
+
+```python
+python manage.py sqlmigrate app-name migration-name
+```
+
+Create super user to access django admin portal
+
+```python
+python manage.py createsuperuser
+```
