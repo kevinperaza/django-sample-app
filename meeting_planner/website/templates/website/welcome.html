@@ -1,11 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome!</title>
-    </head>
-    <body>
-        <h1>Welcome to the meeting planner</h1>
-        <p>There are currently {{number_of_meetings}} meetings in the database.</p>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="{% static 'website/style.css' %}" />
+  </head>
+  <body>
+    <h1>Welcome to the meeting planner</h1>
+    <h2>Meetings</h2>
+    <ul>
+      {% for meeting in meetings %}
+      <li>
+        <a href="{% url 'meeting_details' meeting.id %}"> {{meeting.title}} </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <hr />
+    <a href="{% url 'rooms_list'%}"> Rooms</a>
+  </body>
 </html>

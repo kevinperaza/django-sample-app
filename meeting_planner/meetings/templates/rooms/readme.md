@@ -1,0 +1,1 @@
+Keep rooms related templates in its own folder? Course instructor recommended to include them in "meetings/templates/meetings/" but I feel that if the rooms ever grow big we might find ourselves looking for a needle in a haystack.
