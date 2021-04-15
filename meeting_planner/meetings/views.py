@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.forms import modelform_factory
 
 # Create your views here.
 
@@ -19,3 +20,8 @@ def room_details(req, id):
     room = get_object_or_404(Room, pk=id)
 
     return render(req, "rooms/details.html", {"room": room})
+
+MeetingForm = modelform_factory(Meeting, exclude=[])
+def add_meeting(req):
+    form = MeetingForm()
+    return render(req, "meetings/add_meeting.html", {"form": form})
