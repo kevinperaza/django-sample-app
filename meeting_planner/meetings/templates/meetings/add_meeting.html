@@ -1,10 +1,12 @@
 {%extends "base.html"%} {%block title %} Add new meeting {%endblock%}
 {%block content%}
 <h1>Plan a new meeting</h1>
-<form>
+<form method="POST">
     <table>
         {{form}}
     </table>
+    {% csrf_token %}
+    <button type="submit">Add</button>
 </form>
 
 <a href="{% url 'home' %}">Home</a>
