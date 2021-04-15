@@ -3,4 +3,4 @@ from meetings.models import Meeting, Room
 
 
 def welcome(req):
-    return render(req, "website/welcome.html", {"meetings": Meeting.objects.all(), "rooms": Room.objects.all()})
+    return render(req, "website/welcome.html", {"meetings": Meeting.objects.all()})
